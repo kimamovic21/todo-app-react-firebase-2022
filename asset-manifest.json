@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todo-app-react-firebase-2022/static/css/main.0bc90020.css",
+    "main.js": "/todo-app-react-firebase-2022/static/js/main.7591c52e.js",
+    "index.html": "/todo-app-react-firebase-2022/index.html",
+    "main.0bc90020.css.map": "/todo-app-react-firebase-2022/static/css/main.0bc90020.css.map",
+    "main.7591c52e.js.map": "/todo-app-react-firebase-2022/static/js/main.7591c52e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0bc90020.css",
+    "static/js/main.7591c52e.js"
+  ]
+}

@@ -10,22 +10,31 @@ const style = {
     button: `cursor-pointer flex items-center`,
 }
 
-const Todo = ({todo}) => {
+const Todo = ({todo, toggleComplete, deleteTodo}) => {
   return (
-    <li className={style.li}>
+    <li className={todo.completed ? style.liComplete : style.li}>
         
         <div className={style.row}>
-            <input type="checkbox" />
-            <p className={style.text}>{todo}</p>
+            <input onChange={() => toggleComplete(todo)} 
+                   type="checkbox" 
+                   checked={todo.completed ? 'checked' : ''} 
+            />
+            <p onClick={() => toggleComplete(todo)}
+               className={todo.completed ? style.textComplete : style.text}>
+                {todo.text}
+            </p>
         </div>
 
-        <button><FaRegTrashAlt/></button>
+        <button onClick={() => deleteTodo(todo.id)}>
+          <FaRegTrashAlt/>
+        </button>
 
     </li>
   )
 }
 
 export default Todo;
+
 
 
 
@@ -38,4 +47,11 @@ export default Todo;
 // 6. ispod div elementa dodajemo button element
 // 7. unutar button elementa importujemo react ikonicu
 // 8. dodajemo klase elementima
-// 9. 
+// 9. uredujemo p element {todo.text}
+// 10. uredujemo li klasu
+// 11. uredujemo input klasu
+// 12. p elemente dodajemo uslov kao klasu
+// 13. dodajemo toggleComplete funkciju
+// 14. p elementu dodajemo onClick dogadaj
+// 15. input elementu dodajemo onChange dogadaj
+// 16. button elementu dodajemo deleteTodo funkciju
